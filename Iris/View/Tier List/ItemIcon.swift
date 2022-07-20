@@ -28,6 +28,10 @@ struct ItemIcon: View {
         }
         .frame(width: 48, height: 48)
     }
+    
+    init(_ item: Item) {
+        self.item = item
+    }
 }
 
 
@@ -35,7 +39,7 @@ struct ItemIcon: View {
 
 struct ItemIcon_Previews: PreviewProvider {
     static var previews: some View {
-        ItemIcon(item: Category.example.items[0])
+        ItemIcon(Category.example.items[0])
             .preferredColorScheme(.dark)
     }
 }
